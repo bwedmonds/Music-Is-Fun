@@ -8,4 +8,6 @@ export default class Song {
         this.price = song.collectionPrice
         this.preview = song.previewUrl
     }
+
+    //draw general layout here
 }

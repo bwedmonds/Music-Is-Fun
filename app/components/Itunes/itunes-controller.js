@@ -1,6 +1,7 @@
 import ItunesService from "./itunes-service.js";
+
 //Private
-const itunesService = new ItunesService()
+let _itunesService = new ItunesService()
 
 function drawSongs() {
   //changes button back to GET MUSIC once songs are loaded
@@ -11,9 +12,10 @@ function drawSongs() {
 
 
 //PUBLIC
-class ItunesController {
+export default class ItunesController {
   constructor() {
     //BE SURE TO REGISTER YOUR SUBSCRIBERS!!!!!!!
+    _itunesService.addSubscriber(//add params here)
   }
 
 
@@ -26,6 +28,3 @@ class ItunesController {
     itunesService.getMusicByArtist(artist)
   }
 }
-
-
-export default ItunesController
