@@ -20,12 +20,11 @@ function _drawSongs() {
   //console.log(_itunesService.Songs)
 
 }
+//event listner stuff here
+// document.addEventListener('play', pauseAudio());
 
-
-// for inside event listeners
-// example(e) {
-// let audios = document.getElementsByTagName("audio")
-// audios.addEventListener("play", function pauseAudio() {
+// function pauseAudio(e) {
+//   let audios = document.getElementsByTagName('audio')
 //   for (let i = 0; i < audios.length; i++) {
 //     let audio = audios[i]
 //     if (e.target == audio) {
@@ -34,10 +33,7 @@ function _drawSongs() {
 //       audio.pause()
 //     }
 //   }
-// })
-// addEventListener() private things
-// the event will be 'play'
-
+// }
 
 //PUBLIC
 export default class ItunesController {
