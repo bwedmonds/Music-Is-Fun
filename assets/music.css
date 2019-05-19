@@ -1,0 +1,29 @@
+.jumbotron {
+  background-image: url(https://images.unsplash.com/photo-1465512585831-856a0bfd5e0b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1602&q=80);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 85vh;
+  background-position: bottom left;
+}
+
+.form-inline {
+  padding-top: 12em;
+}
+
+.btn-primary {
+  border: 5px solid;
+  border-color: rgb(107, 183, 205);
+  background-color: transparent;
+}
+
+.lead{
+  font-family: Oswald;
+font-size: 3em;
+text-shadow: 2px 2px 1px black;
+}
+
+.display-4 {
+  font-family: Montserrat;
+  font-size: 5em;
+  text-shadow: 2px 2px 1px black;
+}

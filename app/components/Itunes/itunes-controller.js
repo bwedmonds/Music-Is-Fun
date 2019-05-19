@@ -3,10 +3,21 @@ import ItunesService from "./itunes-service.js";
 //Private
 let _itunesService = new ItunesService()
 
-function drawSongs() {
+function _drawSongs() {
+  //my stuff here
+  let songs = _itunesService.Songs
+  let template = ''
+  for (let i = 0; i < songs.length; i++) {
+    let song = songs[i];
+    console.log('Song', song)
+    template += song.Template
+
+  }
+  document.getElementById('songs').innerHTML = template;
+
   //changes button back to GET MUSIC once songs are loaded
   document.querySelector('#get-music-button').textContent = 'GET MUSIC'
-  console.log(itunesService.Songs)
+  //console.log(_itunesService.Songs)
 
 }
 
@@ -15,7 +26,8 @@ function drawSongs() {
 export default class ItunesController {
   constructor() {
     //BE SURE TO REGISTER YOUR SUBSCRIBERS!!!!!!!
-    _itunesService.addSubscriber(//add params here)
+    _drawSongs()
+    _itunesService.addSubscriber('songs', _drawSongs)
   }
 
 
@@ -25,6 +37,21 @@ export default class ItunesController {
     var artist = e.target.artist.value;
     //changes the button to loading while songs load
     document.querySelector('#get-music-button').textContent = 'LOADING....'
-    itunesService.getMusicByArtist(artist)
+    _itunesService.getMusicByArtist(artist)
   }
+
+  // for inside event listeners
+  //example(e) {
+  //   let audios = document.getElementsByTagName('audio')
+  //   for (let i = 0; i < audios.length; i++) {
+  //     let audio = audios[i]
+  //     if (e.target == audio) {
+  //       audio.play()
+  //     } else {
+  //       audio.pause()
+  //     }
+  //   }
+  // }
+  // addEventListener() private things
+  // the event will be 'play'
 }
