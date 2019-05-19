@@ -27,3 +27,7 @@ text-shadow: 2px 2px 1px black;
   font-size: 5em;
   text-shadow: 2px 2px 1px black;
 }
+
+#audioPlayer {
+  padding-left: 2em;
+}
