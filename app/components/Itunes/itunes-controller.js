@@ -22,6 +22,23 @@ function _drawSongs() {
 }
 
 
+// for inside event listeners
+// example(e) {
+// let audios = document.getElementsByTagName("audio")
+// audios.addEventListener("play", function pauseAudio() {
+//   for (let i = 0; i < audios.length; i++) {
+//     let audio = audios[i]
+//     if (e.target == audio) {
+//       audio.play()
+//     } else {
+//       audio.pause()
+//     }
+//   }
+// })
+// addEventListener() private things
+// the event will be 'play'
+
+
 //PUBLIC
 export default class ItunesController {
   constructor() {
@@ -40,18 +57,4 @@ export default class ItunesController {
     _itunesService.getMusicByArtist(artist)
   }
 
-  // for inside event listeners
-  //example(e) {
-  //   let audios = document.getElementsByTagName('audio')
-  //   for (let i = 0; i < audios.length; i++) {
-  //     let audio = audios[i]
-  //     if (e.target == audio) {
-  //       audio.play()
-  //     } else {
-  //       audio.pause()
-  //     }
-  //   }
-  // }
-  // addEventListener() private things
-  // the event will be 'play'
 }
