@@ -20,20 +20,20 @@ function _drawSongs() {
   //console.log(_itunesService.Songs)
 
 }
-//event listner stuff here
-// document.addEventListener('play', pauseAudio());
+// event listner stuff here
+document.addEventListener('play', () => { pauseAudio(event) }, true);
 
-// function pauseAudio(e) {
-//   let audios = document.getElementsByTagName('audio')
-//   for (let i = 0; i < audios.length; i++) {
-//     let audio = audios[i]
-//     if (e.target == audio) {
-//       audio.play()
-//     } else {
-//       audio.pause()
-//     }
-//   }
-// }
+function pauseAudio(e) {
+  let audios = document.getElementsByTagName('audio')
+  for (let i = 0; i < audios.length; i++) {
+    let audio = audios[i]
+    if (e.target == audio) {
+      audio.play()
+    } else {
+      audio.pause()
+    }
+  }
+}
 
 //PUBLIC
 export default class ItunesController {
